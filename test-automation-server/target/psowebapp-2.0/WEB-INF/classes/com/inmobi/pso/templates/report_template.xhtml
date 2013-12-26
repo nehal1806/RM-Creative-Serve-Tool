@@ -1,0 +1,197 @@
+
+<html>
+<head>
+<TITLE>Ad-Formats Test Results - demo</TITLE>
+<link href="../../file.css" rel="stylesheet" type="text/css" media="all" />
+<script type="text/javascript">
+	function toggle_visibility(tbid, lnkid) {
+		var obj = document.getElementsByTagName("table");
+
+		for (i = 0; i < obj.length; i++) {
+			if (obj[i].id && obj[i].id != tbid) {
+				//document.getElementById(obj[i].id).style.display = "none";
+				x = obj[i].id.substring(3);
+				document.getElementById("lnk" + x).value = "[+] Expand";
+			}
+		}
+		
+		if (document.all) {
+			document.getElementById(tbid).style.display = document
+					.getElementById(tbid).style.display == "block" ? "none"
+					: "block";
+		} else {
+			document.getElementById(tbid).style.display = document
+					.getElementById(tbid).style.display == "table" ? "none"
+					: "table";
+		}
+		
+		document.getElementById(lnkid).value = document.getElementById(lnkid).value == "[-] Collapse" ? "[+] Expand"
+				: "[-] Collapse";
+	}
+</script>
+
+<style type="text/css">
+.tbl {
+	display: none;
+}
+
+.lnk {
+	border: none;
+	background: none;
+	width: 85px;
+}
+
+td {
+	FONT-SIZE: 75%;
+	MARGIN: 0px;
+	COLOR: #000000;
+}
+
+td {
+	FONT-FAMILY: verdana, helvetica, arial, sans-serif
+}
+
+a {
+	TEXT-DECORATION: none;
+}
+</style>
+
+
+</head>
+<body>
+
+	<!--  TABLE # 1 -->
+	<table width="800px" border="0" align="left" cellpadding="4"
+		cellspacing="0">
+		<tr height="1">
+			<td bgcolor="#727272" colspan="5"></td>
+		</tr>
+		<tr bgcolor="#CCCCCC" height="15">
+			<td><strong>Slot-Size: 320x480</strong></td>
+			<td></td>
+			<td bgcolor="#CCCCCC" align="right"><input class="lnk" id="lnk1"
+				type="button" value="[+] Expand"
+				onclick="toggle_visibility('tbl1','lnk1');"></td>
+		</tr>
+		<tr>
+			<td colspan="5">
+				<table width="100%" border="0" cellpadding="5" cellspacing="0"
+					id="tbl1" class="tbl">
+					<tr>
+						<td colspan="5">Short summary which describes Project 1.</td>
+					</tr>
+					<tr bgcolor="#CCCCCC">
+						<td width="20%"><strong>Col-1</strong></td>
+						<td width="20%"><strong>Col-2</strong></td>
+						<td width="20%"><strong>Col-3</strong></td>
+						<td width="20%"><strong>Col-4</strong></td>
+						<td width="20%"><strong>Col-N</strong></td>
+					</tr>
+					
+					<!--  row data	 -->
+					<tr>
+						<td>Document 1 of the project 1.doc</td>
+						<td>209.5 KB</td>
+						<td><a href="#">Download</a></td>
+					</tr>
+					<tr height="1">
+						<td colspan="5" bgcolor="#EEEEEE"></td>
+					</tr>
+					
+					<!--  row data	 -->
+					<tr>
+						<td>Document 2 of the project 1.doc</td>
+						<td>86 KB</td>
+						<td><a href="#">Download</a></td>
+					</tr>
+					<tr height="1">
+						<td colspan="5" bgcolor="#EEEEEE"></td>
+					</tr>
+					<tr>
+						<td>Document 3 of the project 1.doc</td>
+						<td>325.5 KB</td>
+						<td><a href="#">Download</a></td>
+					</tr>
+					<tr height="1">
+						<td colspan="5" bgcolor="#CCCCCC"></td>
+					</tr>
+					<tr height="1">
+						<td bgcolor="#CCCCCC" colspan="5"></td>
+					</tr>
+
+
+				</table>
+			</td>
+		</tr>
+	</table>
+	
+	
+	<!--  TABLE # 2 -->
+	<table width="800px" border="0" align="left" cellpadding="4"
+		cellspacing="0">
+		<tr height="1">
+			<td bgcolor="#727272" colspan="3"></td>
+		</tr>
+		<tr bgcolor="#EEEEEE" height="15">
+			<td colspan="2"><strong>Slot-Size: 480x320</strong></td>
+			<td bgcolor="#EEEEEE" align="right"><input class="lnk" id="lnk2"
+				type="button" value="[+] Expand"
+				onclick="toggle_visibility('tbl2','lnk2');"></td>
+		</tr>
+		<tr>
+			<td colspan="5">
+				<table width="100%" border="0" cellpadding="5" cellspacing="0"
+					id="tbl2" class="tbl">
+					<tr>
+						<td colspan="5">Short summary which describes Project 1.</td>
+					</tr>
+					<tr bgcolor="#CCCCCC">
+						<td width="20%"><strong>Col-1</strong></td>
+						<td width="20%"><strong>Col-2</strong></td>
+						<td width="20%"><strong>Col-3</strong></td>
+						<td width="20%"><strong>Col-4</strong></td>
+						<td width="20%"><strong>Col-N</strong></td>
+					</tr>
+					
+					<!--  row data	 -->
+					<tr>
+						<td>Document 1 of the project 1.doc</td>
+						<td>209.5 KB</td>
+						<td><a href="#">Download</a></td>
+					</tr>
+					<tr height="1">
+						<td colspan="5" bgcolor="#EEEEEE"></td>
+					</tr>
+					
+					<!--  row data	 -->
+					<tr>
+						<td>Document 2 of the project 1.doc</td>
+						<td>86 KB</td>
+						<td><a href="#">Download</a></td>
+					</tr>
+					<tr height="1">
+						<td colspan="5" bgcolor="#EEEEEE"></td>
+					</tr>
+					<tr>
+						<td>Document 3 of the project 1.doc</td>
+						<td>325.5 KB</td>
+						<td><a href="#">Download</a></td>
+					</tr>
+					<tr height="1">
+						<td colspan="5" bgcolor="#CCCCCC"></td>
+					</tr>
+					<tr height="1">
+						<td bgcolor="#CCCCCC" colspan="5"></td>
+					</tr>
+
+
+				</table>
+			</td>
+		</tr>
+	</table>
+
+</body>
+</html>
+
+
+

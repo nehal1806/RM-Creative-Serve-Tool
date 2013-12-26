@@ -1,0 +1,16 @@
+id=android_imai_banner_Interstitial_320x480_320x480.resp, platform=android, format=imai, ad_type=banner, slot_width=320, slot_height=480, creative_width=320, creative_height=480
+id=android_imai_banner_Interstitial_320x480_640x960.resp, platform=android, format=imai, ad_type=banner, slot_width=320, slot_height=480, creative_width=640, creative_height=960
+id=android_imai_banner_bolt_Interstitial_320x480_320x480.resp, platform=android, format=imai, ad_type=banner_bolt, slot_width=320, slot_height=480, creative_width=320, creative_height=480
+id=android_imai_banner_bolt_Interstitial_320x480_640x960.resp, platform=android, format=imai, ad_type=banner_bolt, slot_width=320, slot_height=480, creative_width=640, creative_height=960
+id=android_xhtml_banner_Interstitial_320x480_320x480.resp, platform=android, format=xhtml, ad_type=banner, slot_width=320, slot_height=480, creative_width=320, creative_height=480
+id=android_xhtml_banner_Interstitial_320x480_640x960.resp, platform=android, format=xhtml, ad_type=banner, slot_width=320, slot_height=480, creative_width=640, creative_height=960
+id=android_xhtml_banner_bolt_Interstitial_320x480_320x480.resp, platform=android, format=xhtml, ad_type=banner_bolt, slot_width=320, slot_height=480, creative_width=320, creative_height=480
+id=android_xhtml_banner_bolt_Interstitial_320x480_640x960.resp, platform=android, format=xhtml, ad_type=banner_bolt, slot_width=320, slot_height=480, creative_width=640, creative_height=960
+id=ios_imai_banner_Interstitial_320x480_320x480.resp, platform=iphone, format=imai, ad_type=banner, slot_width=320, slot_height=480, creative_width=320, creative_height=480
+id=ios_imai_banner_Interstitial_320x480_640x960.resp, platform=iphone, format=imai, ad_type=banner, slot_width=320, slot_height=480, creative_width=640, creative_height=960
+id=ios_imai_banner_bolt_Interstitial_320x480_320x480.resp, platform=iphone, format=imai, ad_type=banner_bolt, slot_width=320, slot_height=480, creative_width=320, creative_height=480
+id=ios_imai_banner_bolt_Interstitial_320x480_640x960.resp, platform=iphone, format=imai, ad_type=banner_bolt, slot_width=320, slot_height=480, creative_width=640, creative_height=960
+id=ios_xhtml_banner_Interstitial_320x480_320x480.resp, platform=iphone, format=xhtml, ad_type=banner, slot_width=320, slot_height=480, creative_width=320, creative_height=480
+id=ios_xhtml_banner_Interstitial_320x480_640x960.resp, platform=iphone, format=xhtml, ad_type=banner, slot_width=320, slot_height=480, creative_width=640, creative_height=960
+id=ios_xhtml_banner_bolt_Interstitial_320x480_320x480.resp, platform=iphone, format=xhtml, ad_type=banner_bolt, slot_width=320, slot_height=480, creative_width=320, creative_height=480
+id=ios_xhtml_banner_bolt_Interstitial_320x480_640x960.resp, platform=iphone, format=xhtml, ad_type=banner_bolt, slot_width=320, slot_height=480, creative_width=640, creative_height=960

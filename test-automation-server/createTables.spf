@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ContentFilters</key>
+	<dict/>
+	<key>auto_connect</key>
+	<true/>
+	<key>data</key>
+	<dict>
+		<key>connection</key>
+		<dict>
+			<key>database</key>
+			<string>psotest</string>
+			<key>host</key>
+			<string>127.0.0.1</string>
+			<key>kcid</key>
+			<string>-4253870351929033863</string>
+			<key>name</key>
+			<string>localDb</string>
+			<key>rdbms_type</key>
+			<string>mysql</string>
+			<key>sslCACertFileLocation</key>
+			<string></string>
+			<key>sslCACertFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>sslCertificateFileLocation</key>
+			<string></string>
+			<key>sslCertificateFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>sslKeyFileLocation</key>
+			<string></string>
+			<key>sslKeyFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>type</key>
+			<string>SPTCPIPConnection</string>
+			<key>useSSL</key>
+			<integer>0</integer>
+			<key>user</key>
+			<string>psotest</string>
+		</dict>
+		<key>session</key>
+		<dict>
+			<key>connectionEncoding</key>
+			<string>utf8</string>
+			<key>contentPageNumber</key>
+			<integer>1</integer>
+			<key>contentSelection</key>
+			<data>
+			YnBsaXN0MDDUAQIDBAUGJCVYJHZlcnNpb25YJG9iamVjdHNZJGFy
+			Y2hpdmVyVCR0b3ASAAGGoKgHCBMUFRYaIVUkbnVsbNMJCgsMDxJX
+			TlMua2V5c1pOUy5vYmplY3RzViRjbGFzc6INDoACgAOiEBGABIAF
+			gAdUdHlwZVRyb3dzXxAdU2VsZWN0aW9uRGV0YWlsVHlwZU5TSW5k
+			ZXhTZXTSFwsYGVxOU1JhbmdlQ291bnQQAIAG0hscHR5aJGNsYXNz
+			bmFtZVgkY2xhc3Nlc1pOU0luZGV4U2V0oh8gWk5TSW5kZXhTZXRY
+			TlNPYmplY3TSGxwiI1xOU0RpY3Rpb25hcnmiIiBfEA9OU0tleWVk
+			QXJjaGl2ZXLRJidUZGF0YYABAAgAEQAaACMALQAyADcAQABGAE0A
+			VQBgAGcAagBsAG4AcQBzAHUAdwB8AIEAoQCmALMAtQC3ALwAxwDQ
+			ANsA3gDpAPIA9wEEAQcBGQEcASEAAAAAAAACAQAAAAAAAAAoAAAA
+			AAAAAAAAAAAAAAABIw==
+			</data>
+			<key>contentSortColIsAsc</key>
+			<true/>
+			<key>contentViewport</key>
+			<string>{{0, 0}, {693, 456}}</string>
+			<key>isToolbarVisible</key>
+			<true/>
+			<key>queries</key>
+			<string>
+
+/*DROP TABLE clickredirect; */
+CREATE TABLE clickredirect (
+  `testid` varchar(50),
+  `datetime` datetime,
+  `slot` varchar(50),
+  `creative` varchar(50), 
+  `releasetype` varchar(50),
+  `platform` varchar(50),
+  `version` varchar(50),
+  `integration` varchar(50),
+  `redirecturl` varchar(50),
+  `status` varchar(50)
+)
+
+
+DROP TABLE clicks;
+CREATE TABLE clicks (
+  `testid` varchar(150),
+  `datetime` datetime,
+  `slot` varchar(50),
+  `creative` varchar(50), 
+  `releasetype` varchar(50),
+  `platform` varchar(50),
+  `version` varchar(50),
+  `integration` varchar(50),  
+  `thirdparty` varchar(50),
+  `device` varchar(50),
+  `status` varchar(50)
+) 
+
+
+DROP TABLE beacon;
+CREATE TABLE beacon (
+  `testid` varchar(150),
+  `datetime` datetime,
+  `slot` varchar(50),
+  `creative` varchar(50), 
+  `releasetype` varchar(50),
+  `platform` varchar(50),
+  `version` varchar(50),
+  `integration` varchar(50),  
+  `beacon` int(10),
+  `device` varchar(50),
+  `status` varchar(50)
+)
+
+delete from clicks where testid &gt;= '*';
+select * from clicks where releasetype='xhtml_sync' order by testid asc
+
+select * from clicks where releasetype='xhtml_async' order by testid asc
+
+
+delete from beacon where testid &gt; '*';
+select * from beacon where releasetype='imai_sync' order by testid asc
+select * from beacon where releasetype='imai_async' order by testid asc
+
+select * from beacon where releasetype='imai_sync' order by testid asc
+select * from beacon where releasetype='imai_async' order by testid asc
+
+
+
+
+
+UPDATE clicks SET datetime='2013-07-31 23:46:28', thirdparty='yes' WHERE testid='iOS_5.1.1_SDK-3.7.0_320x480_320x480' and slot='320x480' and creative='320x480' and releasetype='imai_async';
+
+SELECT * FROM clicks WHERE testid='testAndroid_4.2_sdk370' and slot='320x50' and creative='320X48' and releasetype='imai_async';
+
+INSERT INTO `clicks` (`testid`, `datetime`, `slot`, `creative`, `releasetype`, `platform`, `version`, `integration`, `status`) VALUES ('testInterstitialAds_Async_Slot320x480_Creative320x480', '2013-06-13 15:41:13.616', '320x50', '216x36', 'imai', 'android', '4.2', 'sdk370', 'PASS'); 
+
+
+
+select * from beacon where testid='AndroidTest1' and beacon=18
+
+UPDATE beacon SET datetime='2013-08-05 17:42:16' WHERE testid='iOS_6.0.1_SDK-3.7.0_iPhone_320x480_320x480' and slot='320x480' and creative='320x480' and releasetype='imai_async' and device='iPhone' and beacon='18';
+
+UPDATE clicks SET status='PASS' where testid=2
+
+INSERT INTO `beacon` (`testid`, `datetime`, `slot`, `creative`, `releasetype`, `platform`, `version`, `integration`, `beacon`, `device`, `status`) VALUES ('AndroidTest1', '2013-06-13 15:41:13.616', '320x480', '320x480', 'imai_sync', 'iOS', '6.0.1', 'SDK-3.7.0', 777, 'iPhone', 'PASS'); 
+
+/* Queries to fetch data for results presentation */
+
+select * from clicks;
+select * from beacon;
+
+select distinct(slot) from clicks order by slot asc
+
+select c.*, b.beacon as beacon_resp from clicks c inner join beacon b on c.testid = b.testid
+</string>
+			<key>view</key>
+			<string>SP_VIEW_CUSTOMQUERY</string>
+			<key>windowVerticalDividerPosition</key>
+			<real>145</real>
+		</dict>
+	</dict>
+	<key>encrypted</key>
+	<false/>
+	<key>format</key>
+	<string>connection</string>
+	<key>queryFavorites</key>
+	<array/>
+	<key>queryHistory</key>
+	<array>
+		<string>select * from clicks where releasetype='xhtml_async' order by testid asc</string>
+		<string>select * from clicks where releasetype='xhtml_sync'  order by testid asc</string>
+		<string>select * from clicks where releasetype='imai_sync'  order by testid asc</string>
+		<string>select * from beacon where releasetype='imai_sync' order by testid asc</string>
+		<string>select * from beacon order by testid asc</string>
+		<string>select * from clicks order by testid asc</string>
+		<string>delete from clicks where testid &gt;= '*'</string>
+		<string>delete from beacon where testid &gt; '*'</string>
+		<string>rlicks SET datetime='2013-07-31 23:46:28', thirdparty='yes' WHERE testid='iOS_5.1.1_SDK-3.7.0_320x480_320x480' and slot='320x480' and creative='320x480' and releasetype='imai_async'</string>
+		<string>'</string>
+		<string>delete * from clicks</string>
+		<string>select * from clicks</string>
+		<string>select * from beacon</string>
+		<string>select * from clicks where version='5.0.1' and device='iPad' and integration='SDK-3.5.4' order by releasetype asc</string>
+		<string>select * from beacon where version='5.0.1' and device='iPad' and integration='SDK-3.5.4' order by releasetype asc</string>
+		<string>select * from clicks where version='5.0.1' and device='iPad' and integration='SDK-3.5.1' order by releasetype asc</string>
+		<string>select * from beacon where version='5.0.1' and device='iPad' and integration='SDK-3.5.1' order by releasetype asc</string>
+		<string>select * from clicks where version='5.0.1' and device='iPad' and integration='SDK-3.5.1' order by releasetype</string>
+		<string>select * from beacon where version='5.0.1' and device='iPad' and integration='SDK-3.6.1' order by releasetype asc</string>
+		<string>select * from beacon where version='5.0.1' and device='iPad' and integration='SDK-3.6.2' order by releasetype asc</string>
+	</array>
+	<key>rdbms_type</key>
+	<string>mysql</string>
+	<key>rdbms_version</key>
+	<string>5.1.44</string>
+	<key>version</key>
+	<integer>1</integer>
+</dict>
+</plist>

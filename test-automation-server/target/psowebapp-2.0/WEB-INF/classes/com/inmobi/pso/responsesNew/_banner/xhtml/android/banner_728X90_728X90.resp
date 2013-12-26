@@ -1,0 +1,3 @@
+<AdResponse><Ads number="1"><Ad type="banner" actionType="1" actionName="appStore" width="728" height="90"><AdURL>CLICK-URL</AdURL><![CDATA[
+<style type="text/css">.im_3232_bannerContainer{-webkit-tap-highlight-color: 0; position:relative;height:90px;width:728px}.im_3232_bannerContainer img{position:absolute;height:90.0px;width:728.0px;margin-left:-364.0px;margin-top:-45.0px}</style><a href="CLICK-URL" target="_top" style='text-decoration:none;'><div class='im_3232_bannerContainer'><img src="BEACON-URL-18" style='display:none;' /><img style='top:50&#x25;; left:50&#x25;; border:none;' src="IMAGE-SOURCE" alt="altText"/></div></a><img src="BEACON-URL-111"/>
+]]></Ad></Ads></AdResponse>

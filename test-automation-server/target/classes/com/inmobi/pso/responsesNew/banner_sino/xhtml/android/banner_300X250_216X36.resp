@@ -1,0 +1,10 @@
+HTTP/1.1 200 OK
+Date: Sat, 02 Mar 2013 05:33:28 GMT
+Expires: -1
+Cache-Control: no-cache,no-store,must-revalidate
+Pragma: no-cache
+Content-Type: text/html; charset=UTF-8
+Content-Length: 932
+
+      <style type="text/css">.im_3232_bannerContainer{-webkit-tap-highlight-color: 0; position:relative;height:250px;width:300px}#im_3232_imgCont{position:absolute;height:50.0px;width:300.0px;margin-left:-150.0px;margin-top:-25.0px}#im_3232_adImg{position:absolute;height:50.0px;width:300.0px;top:0; left:0;z-index:5; opacity: 0.6;}#im_3232_ci{position: absolute; top:0px; right:0px; z-index: 9;}</style><a href="http://adoutput.inmobi.com/clickUrl" target="_top" style='text-decoration:none;'><div class='im_3232_bannerContainer'><img src="http://adoutput.inmbi.com/beaconUrl?m=18" style='display:none;' /><div id='im_3232_imgCont' style='top:50&#x25;; left:50&#x25;;'><img id='im_3232_adImg' src="http://adoutput.inmobi.com/banner.png" alt="altText"/></div></div></a><img src=tracking.png/> <iframe src="http://user.inmobiugc.com/blueKai.html?id=TESTINMOBIUSERID" width="1" height="0" seamless="seamless" style="display:none;"/>
+

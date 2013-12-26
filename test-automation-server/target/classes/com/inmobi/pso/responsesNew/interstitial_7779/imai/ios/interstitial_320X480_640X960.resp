@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <meta name="viewport" content="user-scalable=0, minimum-scale=1.0, maximum-scale=1.0"/>
+  <style type="text/css">
+      body {margin: 0; overflow: hidden;}
+  </style>
+</head>
+<body>
+<script src="http://inmobisdk-a.akamaihd.net/sdk/ios/mraid.js"> </script>
+<script type="text/javascript">
+	window['im_3232_replaceTimeStamp'] = function(url) {
+    		return url.replace(/\$TS/g, new Date().getTime());
+  	};
+	window['im_3232_handleClick'] = function() {
+		window['im_3232_clickCallback']();
+		window['im_3232_openLandingPage']();
+	};
+	window['im_3232_openLandingPage'] = function() {
+                                    var urlType = 0;
+                        var landingUrl = 'LANDING-PAGE';
+         var landingConfig = {
+            url : window['im_3232_replaceTimeStamp'](landingUrl),
+            urlType : urlType
+            };
+        _im_imai.performAdClick({
+            clickConfig : null,
+            landingConfig : landingConfig
+        });
+    };
+    window['im_3232_clickCallback'] = function() {
+		_im_imai.onUserInteraction(); 
+                	};
+	window['im_3232_impressionCallback'] = function() {
+	};
+	window['im_3232_start'] = 0;
+	window['im_3232_handleTouchStart'] = function(e) {
+        window['im_3232_start'] = 1;
+        if (e === undefined || e == null) {
+        return;
+        }
+        e.preventDefault();
+	};
+	window['im_3232_handleTouchEnd'] = function() {
+	  if (window['im_3232_start'] == 1) {
+		window['im_3232_start'] = 0;
+		window['im_3232_handleClick']();
+	  }
+	};
+</script>
+<script>window.im_3232_tst=(new Date).getTime()</script><script src='mraid.js'></script><style type='text/css'>#im_3232_a{position:relative}#im_3232_a{position:relative;width:100%;height:100%;margin:auto}#im_3232_p{position:relative;text-align:center;display:none;width:100%;height:100%}#im_3232_c{width:25px;height:25px;position:absolute;top:0px;right:10px;display:none;z-index:10}.im_3232_i{border:0}body{padding:0;margin:0;background-color:#fff;width:100%;height:100%}</style><div id='im_3232_ad'><div id='im_3232_a' align='center'><div id='im_3232_p' align='center'><img id="im_3232_i" class="im_3232_i" src="IMAGE-SOURCE"" alt="altText"/></div><div id='im_3232_c'><img id="im_3232_ci" class="im_3232_i" alt="close"/></div></div></div><script>(function(){function B(a,b){a.style.display=b?"table-cell":"none"}function l(a){w&&I++;return x.getElementById(a)}function r(){I++;return(new Date).getTime()}function g(a,b){var d=P;999==a&&(d="http://ec2-23-20-116-88.compute-1.amazonaws.com/beacon/999");d+="?v=5&spid=hw-IfZeSL1t73RKbje8C&rl=inmobi&at=0&n=inmobi&src=handwritten&m="+a+"&sessID="+Q+"&__t="+r()+"_001";8==a?d+="&cta=exit&ctaid=click&it=1&as=1.161.244&fi=true":3==a&&(d+="&secs="+Math.round((r()-y)/1E3));b&&(d+="&p="+b);var c=C-R,e=y-J,f=y-C-e;1==a?d+="&lt="+c:18==a&&(d=d+("&rt="+e)+("&wt="+f));(new Image).src=d}function D(a,b,d){for(var c=e.length-1;0<=c;c--)d?a.addEventListener(e[c],b,!1):a.removeEventListener(e[c],b,!1)}function m(a){a="object"===typeof a?a:l(a);c=this;c.element=a;c.moved=!1;c.startX=0;c.startY=0;c.hteo=!1;a.addEventListener(n[0],c,!1);a.addEventListener(n[1],c,!1)}function z(){J=r();var a,c;a=l(h+"p");B(a,!0);370<=f&&(a.className+=" "+h+"bg370");s&&(l(h+"ci").src="http://adtools-a.akamaihd.net/a/c.1.png",a=l(h+"c"),B(a,!0),c=!p||t,!E&&c&&(new m(a),a.addEventListener("tap",function(a){setBodyDimension(K.w,K.h);p||(a=l(h+"ad"),a.innerHTML="",B(a,!1));t?A||g(3):g(3);t&&b.close()},!1)));E||(E=!0,y=r(),g(18),F&&"function"==typeof F&&F())}function L(){"function"==typeof b.isViewable&&b.isViewable()?z():b.addEventListener(M,function(a){a&&(b.removeEventListener(M,arguments.callee),z())});b.addEventListener("stateChange",function(a){"hidden"==a&&!A&&(t||setTimeout(function(){g(3)},0))});b.addEventListener("error",function(a,b){(!p||!(u&&350==f))&&g(999,G("m:"+a+",a:"+b))});try{var a={useCustomClose:s,lockOrientation:360<=f?!1:!0,orientation:"portrait"};"function"==typeof b.setExpandProperties?b.setExpandProperties(a):(s=!1,b.expand(null,a),u&&z())}catch(c){g(999,G("e:"+c))}}function N(){O++;if(4!=O)if("undefined"!==typeof q.mraid){b=q.mraid;p=!0;v="function"==typeof b.getInMobiAIVersion?b.getInMobiAIVersion():"1.0";"1.0"==v?f=300:"1.1"==v?f=350:"1.2"==v?f=360:"2.0"==v&&(f=370);H&&"function"==typeof H.getSdkVersion&&(f=+H.getSdkVersion().split(".").join(""));if(S||u&&370<=f&&400>f)s=!1;"function"==typeof b.useCustomClose&&b.useCustomClose(s);t=u&&300==f;"loading"===b.getState()?b.addEventListener("ready",L):L()}else setTimeout(N,500);else z()}var q=window,x=document,k=x.body.style,K={w:k.width,h:k.height},b=q.mraid,H=q._im_imai,G=encodeURIComponent,M="viewableChange",p=!1,A=!1,E=!1,I=0,O=0,Q=Math.random().toString(36).substr(2,9),P="BEACON-URL-18",w="CLICK-URL",h="im_3232_",F="",s=!0,k=navigator.userAgent,u=k.match(/iPhone|iPad|iPod/i)?!0:!1,S=k.match(/Android/i)?!0:!1,R=q[h+"tst"],f=!1,c,t,v,C,y,J;String.fromCharCode(37);l(h+"i");q.onerror=function(a,b,c){g(999,G("m:"+a+",u:"+b+",l:"+c))};var e=["touchmove","touchend","touchcancel","mousemove","mouseup"],n=["touchstart","mousedown"];m.prototype.start=function(a){var b=this.element;a.type===n[0]&&(this.hteo=!0);this.moved=!1;this.startX=a.type===n[0]?a.touches[0].clientX:a.clientX;this.startY=a.type===n[0]?a.touches[0].clientY:a.clientY;D(b,this,!0)};m.prototype.move=function(a){var b=a.type===e[0]?a.touches[0].clientY:a.clientY;if(10<Math.abs((a.type===e[0]?a.touches[0].clientX:a.clientX)-this.startX)||10<Math.abs(b-this.startY))this.moved=!0};m.prototype.end=function(a){var b=this.element,c;this.hteo&&a.type===e[4]?(a.preventDefault(),a.stopPropagation(),this.hteo=!1):(this.moved||("function"===typeof CustomEvent?c=new CustomEvent("tap",{bubbles:!0,cancelable:!0}):(c=x.createEvent("Event"),c.initEvent("tap",!0,!0)),a.target.dispatchEvent(c)),D(b,this,!1))};m.prototype.cancel=function(a){a=this.element;this.moved=!1;this.startY=this.startX=0;D(a,this,!1)};m.prototype.handleEvent=function(a){c=this;switch(a.type){case n[0]:c.start(a);break;case e[0]:c.move(a);break;case e[1]:c.end(a);break;case e[2]:c.cancel(a);break;case n[1]:c.start(a);break;case e[3]:c.move(a);break;case e[4]:c.end(a)}};x.addEventListener(e[0],function(a){a.preventDefault()});k=l(h+"p");new m(k);k.addEventListener("tap",function(){A||(A=!0,g(8),p&&"function"==typeof b.openExternal?b.openExternal(w):p?b.open(w):q.location.href=w,p&&(u?350!=f&&b.close():setTimeout(b.close,4E3)))},!1);C=r();g(1);N()})();</script>
+<img src="BEACON-URL-111"/>
+
+</body>
+</html>

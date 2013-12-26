@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: psowebapp
+Bundle-SymbolicName: psowebapp
+Bundle-Version: 1.0.0.qualifier
+Export-Package: com.responsesrv,
+ responses.imai.android,
+ responses.imai.android.ORIG
+Import-Package: javax.servlet.annotation,
+ javax.servlet.http;version="2.6.0"

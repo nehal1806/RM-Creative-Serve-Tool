@@ -1,0 +1,89 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+	<display-name>Archetype Created Web Application</display-name>
+
+	<servlet>
+		<servlet-name>ResponseServer</servlet-name>
+		<servlet-class>com.responsesrv.ResponseServer</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>Clicks</servlet-name>
+		<display-name>Clicks</display-name>
+		<description>Clicks server mock</description>
+		<servlet-class>com.responsesrv.Clicks</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>Beacon</servlet-name>
+		<display-name>Beacon</display-name>
+		<description></description>
+		<servlet-class>com.responsesrv.Beacon</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>AdFormatsResults</servlet-name>
+		<display-name>AdFormatsResults</display-name>
+		<description></description>
+		<servlet-class>com.responsesrv.AdFormatsResults</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ActionServlet</servlet-name>
+		<display-name>ActionServlet</display-name>
+		<description></description>
+		<servlet-class>com.responsesrv.ActionServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>AdResponseGenerator</servlet-name>
+		<display-name>AdResponseGenerator</display-name>
+		<description>Ad Response Generator Tool</description>
+		<servlet-class>com.inmobi.adresponses.AdResponseGenerator</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>Testing</servlet-name>
+		<display-name>Testing</display-name>
+		<description></description>
+		<servlet-class>com.inmobi.adresponses.Testing</servlet-class>
+	</servlet>
+    <servlet>
+		<servlet-name>CreativeToolRespGenerator</servlet-name>
+		<display-name>CreativeToolRespGenerator</display-name>
+		<description>Creative Ad Response Generator</description>
+		<servlet-class>com.inmobi.creativeservetool.CreativeToolRespGenerator</servlet-class>
+	</servlet>
+
+	<!-- servlet mapping -->
+	<servlet-mapping>
+		<servlet-name>ResponseServer</servlet-name>
+		<url-pattern>/rspserver</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Clicks</servlet-name>
+		<url-pattern>/clicks</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Beacon</servlet-name>
+		<url-pattern>/Beacon</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>AdFormatsResults</servlet-name>
+		<url-pattern>/results</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ActionServlet</servlet-name>
+		<url-pattern>/ActionServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>AdResponseGenerator</servlet-name>
+		<url-pattern>/adresponsegen</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>CreativeToolRespGenerator</servlet-name>
+		<url-pattern>/rmtool</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Testing</servlet-name>
+		<url-pattern>/Testing</url-pattern>
+	</servlet-mapping>
+
+</web-app>

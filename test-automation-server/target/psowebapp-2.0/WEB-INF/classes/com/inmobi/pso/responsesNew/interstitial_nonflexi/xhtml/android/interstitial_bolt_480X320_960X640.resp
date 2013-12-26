@@ -1,0 +1,76 @@
+<AdResponse><Ads number="1"><Ad type="rm" actionType="1" actionName="appStore" width="480" height="320"><![CDATA[<script type="text/javascript" src="mraid.js"></script>
+<div id="im_3232_clickTarget"></div>
+<script type="text/javascript">
+    window['im_3232_newIframe'] = function(source) {
+        var clickTarget = document.getElementById('im_3232_clickTarget');
+        var ifr = document.createElement('iframe');
+        ifr.setAttribute('src', source);
+        ifr.setAttribute('seamless', 'seamless');
+        ifr.setAttribute('height', '0');
+        ifr.setAttribute('width', '2');
+        clickTarget.appendChild(ifr);
+    };
+    window['im_3232_eventFire'] = function(el, etype) {
+        if(typeof el[etype] == "function") {
+            el[etype].call(el);
+        }
+        else if (el.fireEvent) {
+            (el.fireEvent('on' + etype));
+        } else if(el.dispatchEvent) {
+            var evObj = document.createEvent('Events');
+            evObj.initEvent(etype, false, true);
+            el.dispatchEvent(evObj);
+        }
+    };
+    window['im_3232_replaceTimeStamp'] = function(url) {
+        return url.replace(/\$TS/g, new Date().getTime());
+    };
+	window['im_3232_openLandingPage'] = function() {
+	    	            var finalLandingUrl = 'LANDING-PAGE'
+        if(typeof mraid !== "undefined" && typeof mraid['openExternal'] !== "undefined") {
+            mraid.openExternal(finalLandingUrl);
+        } else {
+            var anchor =  document.createElement('a');
+            anchor.setAttribute('target', '_blank');
+		            anchor.setAttribute('href', 'https://prclick.inmobi.com/redir/' + finalLandingUrl);
+		            document.body.appendChild(anchor);
+            window['im_3232_eventFire'](anchor, 'click');
+        }
+	};
+	window['im_3232_clickCallback'] = function() {
+		var newIframe = window['im_3232_newIframe'];
+        newIframe('http:\/\/adoutput.inmobi.com\/clickUrl?at=1&am=0');
+		        	newIframe(window['im_3232_replaceTimeStamp']('http:\/\/www.ct1.com'));
+		        	newIframe(window['im_3232_replaceTimeStamp']('http:\/\/www.ct2.com'));
+		        	};
+	window['im_3232_impressionCallback'] = function() {
+	};
+    window['im_3232_handleClick'] = function() {
+        if(window['im_3232_touchAware'] == 0) {
+            window['im_3232_doClick']();
+        }
+    };
+    window['im_3232_doClick'] = function() {
+        window['im_3232_openLandingPage']();
+        window['im_3232_clickCallback']();
+    };
+    window['im_3232_start'] = 0;
+    window['im_3232_touchAware'] = 0;
+    window['im_3232_handleTouchStart'] = function(e) {
+        window['im_3232_touchAware'] = 1;
+        window['im_3232_start'] = 1;
+        if (e === undefined || e == null) {
+            return;
+        }
+        e.preventDefault();
+    };
+    window['im_3232_handleTouchEnd'] = function() {
+        if (window['im_3232_start'] == 1) {
+            window['im_3232_start'] = 0;
+            window['im_3232_doClick']();
+        }
+    };
+</script><script type="text/javascript">window.im_3232_tst=(new Date).getTime()</script><script type="text/javascript" src="mraid.js"></script><style type="text/css">.im_3232_bg{background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#000), to(#333));background: -webkit-linear-gradient(top, #333, #000);background: -moz-linear-gradient(top, #333, #000);background: -o-linear-gradient(top, #333, #000);}.im_3232_bg370{background:rgba(0,0,0,0.8)}#im_3232_ad{display: table;}#im_3232_p{display:none; vertical-align: middle; text-align: center;}#im_3232_c{width:25px;height:25px;position:absolute;top:0px;right:15px;display:none;z-index:10}.im_3232_i{border:0}</style><div id="im_3232_ad" style="width:100&#x25;;height:100&#x25;"><div id="im_3232_p" style="width:100&#x25;;height:100&#x25;" class="im_3232_bg"><img id="im_3232_i" class="im_3232_i" src="IMAGE-SOURCE" alt="altText"/></div><div id="im_3232_c"><img id="im_3232_ci" class="im_3232_i" alt="close"/></div></div><script type="text/javascript">(function(){function D(a,x){a.style.display=x?"table-cell":"none"}function l(a){y&&M++;return q.getElementById(a)}function r(){M++;return(new Date).getTime()}function k(a,x){var d=W;999==a&&(d="http://ec2-23-20-116-88.compute-1.amazonaws.com/beacon/999");d+="?v=5&spid=hw-SvghNhUBmJcMz566v&rl=inmobi&at=0&n=inmobi&src=handwritten&m="+a+"&sessID="+X+"&__t="+r()+"_001";8==a?d+="&cta=exit&ctaid=click&it=1&as=1.161.244&fi=true":3==a&&(d+="&secs="+Math.round((r()-z)/1E3));x&&(d+="&p="+x);var c=E-Y,b=z-N,e=z-E-b;1==a?d+="&lt="+c:18==a&&(d=d+("&rt="+b)+("&wt="+e));(new Image).src=d}function F(a,c,d){for(var b=e.length-1;0<=b;b--)d?a.addEventListener(e[b],c,!1):a.removeEventListener(e[b],c,!1)}function m(a){a="object"===typeof a?a:l(a);b=this;b.element=a;b.moved=!1;b.startX=0;b.startY=0;b.hteo=!1;a.addEventListener(n[0],b,!1);a.addEventListener(n[1],b,!1)}function A(){N=r();var a,b;O(P,P);l(f+"i");a=l(f+"p");D(a,!0);370<=g&&(a.className+=" "+f+"bg370");s&&(l(f+"ci").src="http://adtools-a.akamaihd.net/a/c.1.png",a=l(f+"c"),D(a,!0),b=!p||t,!G&&b&&(new m(a),a.addEventListener("tap",function(a){O(Q.w,Q.h);p||(a=l(f+"ad"),a.innerHTML="",D(a,!1));t?B||k(3):k(3);t&&c.close()},!1)));G||(G=!0,z=r(),k(18),H&&"function"==typeof H&&H())}function O(a,b){var d=a?a:"auto",c=b?b:"auto";R.width=d;R.height=c;C.width=d;C.height=c}function S(){"function"==typeof c.isViewable&&c.isViewable()?A():c.addEventListener(T,function(a){a&&(c.removeEventListener(T,arguments.callee),A())});c.addEventListener("stateChange",function(a){"hidden"==a&&!B&&(t||setTimeout(function(){k(3)},0))});c.addEventListener("error",function(a,b){(!p||!(u&&350==g))&&k(999,I("m:"+a+",a:"+b))});try{var a={useCustomClose:s,lockOrientation:0,orientation:"portrait"};"function"==typeof c.setExpandProperties?c.setExpandProperties(a):(s=!1,c.expand(null,a),u&&A())}catch(b){k(999,I("e:"+b))}}function U(){V++;if(2!=V)if("undefined"!==typeof h.mraid){c=h.mraid;p=!0;v="function"==typeof c.getInMobiAIVersion?c.getInMobiAIVersion():"1.0";"1.0"==v?g=300:"1.1"==v?g=350:"1.2"==v?g=360:"2.0"==v&&(g=370);J&&"function"==typeof J.getSdkVersion&&(g=+J.getSdkVersion().split(".").join(""));if(Z||u&&370<=g&&400>g)s=!1;"function"==typeof c.useCustomClose&&c.useCustomClose(s);t=u&&300==g;"loading"===c.getState()?c.addEventListener("ready",S):S()}else setTimeout(U,500);else A()}var h=window,q=document,C=q.body.style,R=q.documentElement.style,Q={w:C.width,h:C.height},c=h.mraid,J=h._im_imai,I=encodeURIComponent,T="viewableChange",p=!1,B=!1,G=!1,M=0,V=0,X=Math.random().toString(36).substr(2,9),W="BEACON-URL-18",y="CLICK-URL",f="im_3232_",K=h[f+"clickCallback"],L=h[f+"openLandingPage"],H=h[f+"impressionCallback"],s=!0,w=navigator.userAgent,u=w.match(/iPhone|iPad|iPod/i)?!0:!1,Z=w.match(/Android/i)?!0:!1,Y=h[f+"tst"],g=!1,b,t,v,E,z,N,P="100"+String.fromCharCode(37);h.onerror=function(a,b,c){k(999,I("m:"+a+",u:"+b+",l:"+c))};var e=["touchmove","touchend","touchcancel","mousemove","mouseup"],n=["touchstart","mousedown"];m.prototype.start=function(a){var b=this.element;a.type===n[0]&&(this.hteo=!0);this.moved=!1;this.startX=a.type===n[0]?a.touches[0].clientX:a.clientX;this.startY=a.type===n[0]?a.touches[0].clientY:a.clientY;F(b,this,!0)};m.prototype.move=function(a){var b=a.type===e[0]?a.touches[0].clientY:a.clientY;if(10<Math.abs((a.type===e[0]?a.touches[0].clientX:a.clientX)-this.startX)||10<Math.abs(b-this.startY))this.moved=!0};m.prototype.end=function(a){var b=this.element,c;this.hteo&&a.type===e[4]?(a.preventDefault(),a.stopPropagation(),this.hteo=!1):(this.moved||("function"===typeof CustomEvent?c=new CustomEvent("tap",{bubbles:!0,cancelable:!0}):(c=q.createEvent("Event"),c.initEvent("tap",!0,!0)),a.target.dispatchEvent(c)),F(b,this,!1))};m.prototype.cancel=function(a){a=this.element;this.moved=!1;this.startY=this.startX=0;F(a,this,!1)};m.prototype.handleEvent=function(a){b=this;switch(a.type){case n[0]:b.start(a);break;case e[0]:b.move(a);break;case e[1]:b.end(a);break;case e[2]:b.cancel(a);break;case n[1]:b.start(a);break;case e[3]:b.move(a);break;case e[4]:b.end(a)}};q.addEventListener(e[0],function(a){a.preventDefault()});w=l(f+"p");new m(w);w.addEventListener("tap",function(){B||(B=!0,k(8),K&&"function"==typeof K&&K(),L&&"function"==typeof L?L():p&&"function"==typeof c.openExternal?c.openExternal(y):p?c.open(y):h.location.href=y,p&&(u?350!=g&&c.close():setTimeout(c.close,4E3)))},!1);E=r();k(1);U()})();</script>
+<img src="BEACON-URL-111"/>
+
+]]></Ad></Ads></AdResponse>
